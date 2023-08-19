@@ -1,0 +1,165 @@
+
+
+Bus Reservation System:
+	-Login:
+		+CheckCredentials()
+	-Buy Ticket:
+		+CheckAvailableBus()
+		+SelectBus()
+		+SelectSeat()
+		+AddPromoCode()
+		+ConfirmReservation()
+	-Refund Ticket
+		+ViewPendingReservation()
+		+CancelReservation()
+
+
+
+//====================================================================
+//						APIs Functions Definitions
+//====================================================================
+
+
+/**================================================================
+ * @Fn				-CheckCredentials
+ * @brief 			-Checks Validity of the Entered Email and Password
+ * @param [in]	 	-Email
+ * @param [in]	 	-Password
+ * @retval 			-1 for Success, 0 for Failure
+ * Note				-If user entered wrong credentials he will be asked
+ 					 to re-enter them again
+ */
+int CheckCredentials(char email[], char password[]);
+
+
+/**================================================================
+ * @Fn				-CheckAvailableBus
+ * @brief 			-Checks Available Bus Trips Offered by the System
+ * @param [in]	 	-NONE
+ * @retval 			-NONE
+ * Note				-User can select the desired trip from the offered 								list of buses
+ */
+void CheckAvailableBus(void);
+
+
+/**================================================================
+ * @Fn				-SelectBus
+ * @brief 			-User chooses the desired trip from the offered Bus 							Trips
+ * @param [in]	 	-busNum
+ * @retval 			-NONE
+ * Note				-After choosing the busNum, a chart of the Bus 									available seats will be displayed
+ */
+void SelectBus(int busNum);
+
+
+/**================================================================
+ * @Fn				-SelectSeat
+ * @brief 			-User selects the desired seat from the available 								seats displayed 
+ * @param [in]	 	-seatNum
+ * @retval 			-1 for success, 0 for failed
+ * Note				-If the user entered an invalid seatNum, he will be 							asked to re-choose another seat
+ */
+int SelectSeat(int seatNum);
+
+
+/**================================================================
+ * @Fn				-AddPromoCode
+ * @brief 			-User will be asked to enter a promoCode (if 									available) to get a discount
+ * @param [in]	 	-promoCode
+ * @retval 			-1 for success, 0 for failed
+ * Note				-If the user entered an invalid promoCode, he will 								be asked to re-enter an available one or to 									proceed without adding a promoCode
+ */
+int AddPromoCode(char promoCode[]);
+
+
+/**================================================================
+ * @Fn				-ConfirmReservation
+ * @brief 			-All ride details will be displayed for the user to 							confirm it
+ * @param [in]	 	-confirm
+ * @retval 			-tripID for success, 0 for failed
+ * Note				-User will be required to enter 1 to confirm the 								trip, or 0 to decline reservation
+ */
+int ConfirmReservation(int confirm);
+
+
+/**================================================================
+ * @Fn				-ViewPendingReservation
+ * @brief 			-Pending Trips IDs will be displayed to the user to select 						one to cancel
+ * @param [in]	 	-NONE
+ * @retval 			-NONE
+ * Note				-NONE
+ */
+int ViewPendingReservation();
+
+
+/**================================================================
+ * @Fn				-CancelReservation
+ * @brief 			-User will get to choose a tripID to cancel their reservation
+ * @param [in]	 	-tripID
+ * @retval 			-1 for success, 0 for failed
+ * Note				-If the entered tripID is not among the list, user will be 						asked to re-enter the correct tripID
+ */
+int CancelReservation(int tripID);
+
+
+
+
+
+//====================================================================
+//						APIs Functions Scenarios
+//====================================================================
+
+/*
+	+ >> for Success Scenarios
+	- >> for Failed Scenarios
+*/
+
+=int CheckCredentials(char[] email, char[] password);
+	>>User will be asked to enter his validated email and password.
+		+: User has entered the correct email and password, he will be navigated 	to the main screen
+		-: User has entered an incorrect email or password, he will be asked 	   to enter the correct credentials again
+
+
+=void CheckAvailableBus(void);
+	>>All available buses will be displayed to the user to choose among them
+		+: There are available buses with empty seats, all their details will 	   be displayed to the user
+		-: No current buses available to be reserved, A message will be displayed 	 to the user regarding unavailablity of buses right now
+
+
+=void SelectBus(int busNum);
+	>>User get to choose their desired trip from the offered Bus Trips
+		+: User enters an available bus number, he will proceed to the SelectSeat 	 phase
+		-: User enters an unavailable bus number, he will be asked to re-enter 	  	 a valid bus number from the displayed bus details
+
+
+=int SelectSeat(int seatNum);
+	>>User get to choose a seat number from the diplayed seats chart
+		+: User enters an available seat number, he will proceed to the 		   AddPromoCode phase
+		-: User enters an unavailable seat number, he will be asked to re-enter   	 a valid seat number from the displayed seats chart
+
+
+=int AddPromoCode(char[] promoCode);
+	>>User is asked to enter a promoCode if he has any or to proceed without 	  	entering one
+		+: User enters an available promoCode, he will get a discount on his 	   reservation price
+		-: User enters an unavailable promoCode, he will be asked to re-enter     	 a valid promoCode or to proceed without entering one
+
+
+=int ConfirmReservation(int confirm);
+	>>All Reservation details will be displayed to the user with the final price  	(after adding a promoCode if he has any) in order to revise it and confirm 	  their reservation
+		+: User enters 1 to confirm the reservation, Reservation is completed 	   and saved in the pending reservations.
+		-: User enters 0 to decline to the reservation, Reservation is declined,  	 nothing will be saved and the user will be navigated to the main screen
+
+
+=int ViewPendingReservation();
+	>>All Pending Reservation will be displayed to select any to be canceled
+		+: User already has pending trips, Trip details with its tripID will be   	 displayed
+		-: User hasn't reserved a trip before, A message concerning "No Pending   	 Trips" will be displayed instead
+
+
+=int CancelReservation(int tripID);
+	>>User enters a tripID to cancel the reservation
+		+: User entered a valid tripID, Reservation will be canceled successfully
+		-: User entered an invalid tripID, he will be asked to re-enter a valid   	 tripID from the displayed pending reservations
+
+
+
