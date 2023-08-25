@@ -61,11 +61,16 @@ void TIMER0_getCounterValue(uint8_t* ticks){
 	*ticks = TCNT0;
 }
 
-void TIMER0_setCompareValue(uint8_t  ticks){
+void TIMER0_setCompareValue(uint8_t ticks){
 	OCR0 = ticks;
 }
 
 ISR(TIMER0_OVF_vect)
+{
+	//GP_IRQ_CallBack();
+}
+
+ISR(TIMER0_COMP_vect)
 {
 	GP_IRQ_CallBack();
 }

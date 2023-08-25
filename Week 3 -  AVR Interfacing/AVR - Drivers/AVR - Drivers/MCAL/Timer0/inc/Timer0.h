@@ -64,7 +64,7 @@ typedef struct
 
 void TIMER0_init(TIMER0_Config_t* TIMER0_Config);
 void TIMER0_getCounterValue(uint8_t* ticks);
-void TIMER0_setCompareValue(uint8_t  ticks);
+void TIMER0_setCompareValue(uint8_t ticks);
 
 
 #endif /* TIMER0_H_ */
