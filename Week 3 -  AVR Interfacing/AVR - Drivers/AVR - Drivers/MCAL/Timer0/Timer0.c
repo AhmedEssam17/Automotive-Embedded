@@ -47,9 +47,14 @@ void TIMER0_init(TIMER0_Config_t* TIMER0_Config){
 	TCNT0 = TIMER0_Config->Initial_Value;
 	
 	//-----------------------------
-	//4) Call back ISR function
+	//5) Call back ISR function
 	//-----------------------------
 	GP_IRQ_CallBack = TIMER0_Config->P_CallBack;
+	
+	//-----------------------------
+	//6) Toggle OC0
+	//-----------------------------
+	TCCR0 |= 1<<4;
 }
 
 void TIMER0_deinit(void)

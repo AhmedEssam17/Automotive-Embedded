@@ -69,6 +69,8 @@ Discarded input sections
  .text          0x00000000        0x0 main.o
  .data          0x00000000        0x0 main.o
  .bss           0x00000000        0x0 main.o
+ .bss.Timer_Counter
+                0x00000000        0x4 main.o
  .text          0x00000000        0x0 MCAL/ADC/ADC.o
  .data          0x00000000        0x0 MCAL/ADC/ADC.o
  .bss           0x00000000        0x0 MCAL/ADC/ADC.o
@@ -295,7 +297,7 @@ END GROUP
 .rela.plt
  *(.rela.plt)
 
-.text           0x00000000      0x358
+.text           0x00000000      0x2bc
  *(.vectors)
  .vectors       0x00000000       0x54 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
                 0x00000000                __vector_default
@@ -375,33 +377,33 @@ END GROUP
                 0x00000092                . = ALIGN (0x2)
  *(.text.*)
  .text.Timer0_Callback
-                0x00000092       0x32 main.o
+                0x00000092        0x2 main.o
                 0x00000092                Timer0_Callback
- .text.main     0x000000c4       0xa4 main.o
-                0x000000c4                main
+ .text.main     0x00000094       0x32 main.o
+                0x00000094                main
  .text.__vector_16
-                0x00000168       0x4e MCAL/ADC/ADC.o
-                0x00000168                __vector_16
+                0x000000c6       0x4e MCAL/ADC/ADC.o
+                0x000000c6                __vector_16
  .text.DIO_SetPinDir
-                0x000001b6       0xdc MCAL/DIO/DIO.o
-                0x000001b6                DIO_SetPinDir
+                0x00000114       0xdc MCAL/DIO/DIO.o
+                0x00000114                DIO_SetPinDir
  .text.TIMER0_init
-                0x00000292       0x5c MCAL/Timer0/Timer0.o
-                0x00000292                TIMER0_init
+                0x000001f0       0x62 MCAL/Timer0/Timer0.o
+                0x000001f0                TIMER0_init
  .text.TIMER0_setCompareValue
-                0x000002ee        0x4 MCAL/Timer0/Timer0.o
-                0x000002ee                TIMER0_setCompareValue
+                0x00000252        0x4 MCAL/Timer0/Timer0.o
+                0x00000252                TIMER0_setCompareValue
  .text.__vector_11
-                0x000002f2       0x14 MCAL/Timer0/Timer0.o
-                0x000002f2                __vector_11
+                0x00000256       0x14 MCAL/Timer0/Timer0.o
+                0x00000256                __vector_11
  .text.__vector_10
-                0x00000306       0x4e MCAL/Timer0/Timer0.o
-                0x00000306                __vector_10
-                0x00000354                . = ALIGN (0x2)
+                0x0000026a       0x4e MCAL/Timer0/Timer0.o
+                0x0000026a                __vector_10
+                0x000002b8                . = ALIGN (0x2)
  *(.fini9)
- .fini9         0x00000354        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
-                0x00000354                _exit
-                0x00000354                exit
+ .fini9         0x000002b8        0x0 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+                0x000002b8                _exit
+                0x000002b8                exit
  *(.fini9)
  *(.fini8)
  *(.fini8)
@@ -420,11 +422,11 @@ END GROUP
  *(.fini1)
  *(.fini1)
  *(.fini0)
- .fini0         0x00000354        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
+ .fini0         0x000002b8        0x4 c:/program files (x86)/atmel/studio/7.0/toolchain/avr8/avr8-gnu-toolchain/bin/../lib/gcc/avr/5.4.0/avr5\libgcc.a(_exit.o)
  *(.fini0)
-                0x00000358                _etext = .
+                0x000002bc                _etext = .
 
-.data           0x00800060        0x0 load address 0x00000358
+.data           0x00800060        0x0 load address 0x000002bc
                 0x00800060                PROVIDE (__data_start, .)
  *(.data)
  *(.data*)
@@ -436,33 +438,30 @@ END GROUP
                 0x00800060                _edata = .
                 0x00800060                PROVIDE (__data_end, .)
 
-.bss            0x00800060       0x1b
+.bss            0x00800060       0x17
                 0x00800060                PROVIDE (__bss_start, .)
  *(.bss)
  *(.bss*)
- .bss.Timer_Counter
-                0x00800060        0x4 main.o
-                0x00800060                Timer_Counter
  .bss.GP_IRQ_CallBack
-                0x00800064        0x2 MCAL/Timer0/Timer0.o
-                0x00800064                GP_IRQ_CallBack
+                0x00800060        0x2 MCAL/Timer0/Timer0.o
+                0x00800060                GP_IRQ_CallBack
  *(COMMON)
- COMMON         0x00800066        0x6 main.o
-                0x00800066                TIMER0_Config
- COMMON         0x0080006c        0x9 MCAL/ADC/ADC.o
-                0x0080006c                Global_ADC_Config
-                0x00800073                EXTI_Config
- COMMON         0x00800075        0x6 MCAL/Timer0/Timer0.o
-                0x00800075                Global_TIMER0_Config
-                0x0080007b                PROVIDE (__bss_end, .)
-                0x00000358                __data_load_start = LOADADDR (.data)
-                0x00000358                __data_load_end = (__data_load_start + SIZEOF (.data))
+ COMMON         0x00800062        0x6 main.o
+                0x00800062                TIMER0_Config
+ COMMON         0x00800068        0x9 MCAL/ADC/ADC.o
+                0x00800068                Global_ADC_Config
+                0x0080006f                EXTI_Config
+ COMMON         0x00800071        0x6 MCAL/Timer0/Timer0.o
+                0x00800071                Global_TIMER0_Config
+                0x00800077                PROVIDE (__bss_end, .)
+                0x000002bc                __data_load_start = LOADADDR (.data)
+                0x000002bc                __data_load_end = (__data_load_start + SIZEOF (.data))
 
-.noinit         0x0080007b        0x0
+.noinit         0x00800077        0x0
                 [!provide]                PROVIDE (__noinit_start, .)
  *(.noinit*)
                 [!provide]                PROVIDE (__noinit_end, .)
-                0x0080007b                _end = .
+                0x00800077                _end = .
                 [!provide]                PROVIDE (__heap_start, .)
 
 .eeprom         0x00810000        0x0
@@ -544,13 +543,13 @@ END GROUP
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000      0xd1e
+.debug_info     0x00000000      0xcc7
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x4e6 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_info    0x000004e6      0x1fb main.o
- .debug_info    0x000006e1      0x25f MCAL/ADC/ADC.o
- .debug_info    0x00000940      0x21e MCAL/DIO/DIO.o
- .debug_info    0x00000b5e      0x1c0 MCAL/Timer0/Timer0.o
+ .debug_info    0x000004e6      0x1a4 main.o
+ .debug_info    0x0000068a      0x25f MCAL/ADC/ADC.o
+ .debug_info    0x000008e9      0x21e MCAL/DIO/DIO.o
+ .debug_info    0x00000b07      0x1c0 MCAL/Timer0/Timer0.o
 
 .debug_abbrev   0x00000000      0x85a
  *(.debug_abbrev)
@@ -560,13 +559,13 @@ END GROUP
  .debug_abbrev  0x0000067e       0xcc MCAL/DIO/DIO.o
  .debug_abbrev  0x0000074a      0x110 MCAL/Timer0/Timer0.o
 
-.debug_line     0x00000000      0x872
+.debug_line     0x00000000      0x82c
  *(.debug_line .debug_line.* .debug_line_end)
  .debug_line    0x00000000      0x116 C:/Program Files (x86)/Atmel/Studio/7.0/Packs/atmel/ATmega_DFP/1.7.374/gcc/dev/atmega32/avr5/crtatmega32.o
- .debug_line    0x00000116      0x161 main.o
- .debug_line    0x00000277      0x191 MCAL/ADC/ADC.o
- .debug_line    0x00000408      0x2e0 MCAL/DIO/DIO.o
- .debug_line    0x000006e8      0x18a MCAL/Timer0/Timer0.o
+ .debug_line    0x00000116      0x113 main.o
+ .debug_line    0x00000229      0x191 MCAL/ADC/ADC.o
+ .debug_line    0x000003ba      0x2e0 MCAL/DIO/DIO.o
+ .debug_line    0x0000069a      0x192 MCAL/Timer0/Timer0.o
 
 .debug_frame    0x00000000      0x224
  *(.debug_frame)
