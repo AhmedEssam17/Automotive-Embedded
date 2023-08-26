@@ -6,6 +6,8 @@
  */ 
 
 #include "Timer0.h"
+#include <util/delay.h>
+#define F_CPU 16000000UL
 
 void (*GP_IRQ_CallBack)(void) = NULL;
 
@@ -54,7 +56,7 @@ void TIMER0_init(TIMER0_Config_t* TIMER0_Config){
 	//-----------------------------
 	//6) Toggle OC0
 	//-----------------------------
-	TCCR0 |= 1<<4;
+	//TCCR0 |= 1<<4;
 }
 
 void TIMER0_deinit(void)
@@ -68,6 +70,31 @@ void TIMER0_getCounterValue(uint8_t* ticks){
 
 void TIMER0_setCompareValue(uint8_t ticks){
 	OCR0 = ticks;
+}
+
+void PWM_setDutyCycle(uint8_t dutyCycle)
+{
+	if(Global_TIMER0_Config.Timer_Mode == TIMER0_MODE_Fast_PWM_Noninverting)
+	{
+		OCR0 = dutyCycle;
+	}
+	else if(Global_TIMER0_Config.Timer_Mode == TIMER0_MODE_Fast_PWM_Inverting)
+	{
+		OCR0 = (uint8_t)(255 - dutyCycle);
+	}
+}
+
+void PWM_varyingDutyCycle(){
+	uint8_t duty;
+	for(duty = 1; duty < 254; duty++){
+		PWM_setDutyCycle(duty);
+		_delay_ms(100);
+	}
+	_delay_ms(50);
+	for(duty = 254; duty >= 1; duty--){
+		PWM_setDutyCycle(duty);
+		_delay_ms(100);
+	}
 }
 
 ISR(TIMER0_OVF_vect)
