@@ -49,7 +49,7 @@ void SPI_init(){
 	/* CPOL: Clock Polarity */
 	/* CPHA: Clock Phase */	
 	SPCR_Config &= ~(0b11<<SPCR_CPHA);
-	SPCR_Config |= CLK_POL_PHA;
+	SPCR_Config |= (CLK_POL_PHA<<SPCR_CPHA);
 	
 	/* SPI2X: Double SPI Speed Bit*/
 #if SPR2X == SPR2X_EN
