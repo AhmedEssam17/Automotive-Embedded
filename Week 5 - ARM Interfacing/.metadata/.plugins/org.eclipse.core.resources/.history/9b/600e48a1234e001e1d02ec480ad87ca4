@@ -1,0 +1,31 @@
+/*
+ * RCC_Config.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_RCC_CONFIG_H_
+#define INC_RCC_CONFIG_H_
+
+#define PLL_ON			PLL_DS
+
+#define CSS_ON			CSS_OFF
+
+#define HSE_BYP			HSE_BYP_DS
+
+#define HSI_ON			HSI_OFF
+
+#define MCO				MCO_NO_CLK
+
+#define USB_PRE			OTG_FS_PRES_DIV3
+
+#define PPRE2			APBH_NO_DIV
+
+#define PPRE1			APBL_NO_DIV
+
+#define HPRE			AHB_NO_DIV
+
+#define SW				SW_HSE
+
+#endif /* INC_RCC_CONFIG_H_ */

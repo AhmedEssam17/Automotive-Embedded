@@ -1,0 +1,56 @@
+/*
+ * GPIO.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_GPIO_H_
+#define INC_GPIO_H_
+
+//====================================================================
+//						Peripheral Registers
+//====================================================================
+
+typedef struct{
+	volatile uint32_t CRL;
+	volatile uint32_t CRH;
+	volatile uint32_t IDR;
+	volatile uint32_t ODR;
+	volatile uint32_t BSRR;
+	volatile uint32_t BRR;
+	volatile uint32_t LCKR;
+}GPIO_t;
+
+typedef struct{
+	volatile uint32_t EVCR;
+	volatile uint32_t MAPR;
+	volatile uint32_t EXTICR[4];
+	uint32_t 		  RESERVED0;
+	volatile uint32_t MAPR2;
+}AFIO_t;
+
+//====================================================================
+//						Configuration Structure
+//====================================================================
+
+typedef struct{
+	uint16_t GPIO_PinNumber;		//Specifies Pin Number to be Configured >> @ref GPIO_PIN_def
+	uint16_t GPIO_MODE;				//Specifies Pin Mode 					>> @ref GPIO_MODE_def
+	uint16_t GPIO_OUTPUT_SPEED;		//Specifies Pin Output Speed		 	>> @ref GPIO_OUTPUT_SPEED_def
+}GPIO_PinConfig_t;
+
+void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+void GPIO_deinit(GPIO_t *GPIOx);
+
+uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+
+void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+
+void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+
+uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+
+#endif /* INC_GPIO_H_ */

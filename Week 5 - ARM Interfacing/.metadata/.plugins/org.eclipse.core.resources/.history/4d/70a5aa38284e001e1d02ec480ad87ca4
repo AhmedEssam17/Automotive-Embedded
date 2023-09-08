@@ -1,0 +1,24 @@
+/*
+ * GPIO.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_GPIO_H_
+#define INC_GPIO_H_
+
+void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+void GPIO_deinit(GPIO_t *GPIOx);
+
+uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+
+void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+
+void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+
+uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+
+#endif /* INC_GPIO_H_ */

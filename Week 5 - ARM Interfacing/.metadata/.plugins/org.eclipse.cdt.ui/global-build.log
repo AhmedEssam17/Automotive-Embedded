@@ -1,0 +1,1425 @@
+10:41:21 **** Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../RCC/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"RCC/RCC.d" -MT"RCC/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "RCC/RCC.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:25: warning: unused variable 'x' [-Wunused-variable]
+   31 |                 uint8_t x = 10;
+      |                         ^
+In file included from ../RCC/RCC.c:11:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Private.h:47: warning: "CSS_ON" redefined
+   47 | #define         CSS_ON                                          (uint32_t)(1<<19)
+      | 
+In file included from ../RCC/RCC.c:9:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Config.h:13: note: this is the location of the previous definition
+   13 | #define CSS_ON                  CSS_OFF
+      | 
+In file included from ../RCC/RCC.c:11:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Private.h:56: warning: "HSI_ON" redefined
+   56 | #define         HSI_ON                                          (uint32_t)(1<<0)
+      | 
+In file included from ../RCC/RCC.c:9:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Config.h:17: note: this is the location of the previous definition
+   17 | #define HSI_ON                  HSI_OFF
+      | 
+arm-none-eabi-gcc -o "RCC - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\RCC - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RCC - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RCC - Driver.elf
+ 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  RCC\ -\ Driver.elf  > "RCC - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    732	      8	   1568	   2308	    904	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: RCC - Driver.list
+ 
+10:42:12 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../RCC/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"RCC/RCC.d" -MT"RCC/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "RCC/RCC.o"
+In file included from ../RCC/RCC.c:9:
+../RCC/RCC.c: In function 'RCC_init':
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Config.h:13:33: error: 'CSS_OFF' undeclared (first use in this function); did you mean 'CSS_ON'?
+   13 | #define CSS_ON                  CSS_OFF
+      |                                 ^~~~~~~
+../RCC/RCC.c:18:30: note: in expansion of macro 'CSS_ON'
+   18 |         RCC->CR |= (PLL_ON | CSS_ON | HSE_BYP | HSI_ON);
+      |                              ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Config.h:13:33: note: each undeclared identifier is reported only once for each function it appears in
+   13 | #define CSS_ON                  CSS_OFF
+      |                                 ^~~~~~~
+../RCC/RCC.c:18:30: note: in expansion of macro 'CSS_ON'
+   18 |         RCC->CR |= (PLL_ON | CSS_ON | HSE_BYP | HSI_ON);
+      |                              ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc/RCC_Config.h:17:33: error: 'HSI_OFF' undeclared (first use in this function); did you mean 'HSE_OFF'?
+   17 | #define HSI_ON                  HSI_OFF
+      |                                 ^~~~~~~
+../RCC/RCC.c:18:49: note: in expansion of macro 'HSI_ON'
+   18 |         RCC->CR |= (PLL_ON | CSS_ON | HSE_BYP | HSI_ON);
+      |                                                 ^~~~~~
+make: *** [RCC/subdir.mk:19: RCC/RCC.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+10:42:24 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../RCC/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"RCC/RCC.d" -MT"RCC/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "RCC/RCC.o"
+arm-none-eabi-gcc -o "RCC - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\RCC - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RCC - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RCC - Driver.elf
+ 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  RCC\ -\ Driver.elf  > "RCC - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: RCC - Driver.list
+ 
+10:42:27 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:42:33 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:31:17: warning: unused variable 'x' [-Wunused-variable]
+   31 |         uint8_t x = 10;
+      |                 ^
+arm-none-eabi-gcc -o "RCC - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\RCC - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RCC - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RCC - Driver.elf
+ 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  RCC\ -\ Driver.elf  > "RCC - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: RCC - Driver.list
+ 
+10:43:50 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:45:26 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:46:53 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:50:12 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:51:44 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:52:28 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+    724	      8	   1568	   2300	    8fc	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+10:53:15 **** Incremental Build of configuration Debug for project RCC - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/RCC - Driver/RCC/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "RCC - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\RCC - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RCC - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RCC - Driver.elf
+ 
+arm-none-eabi-size   RCC\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  RCC\ -\ Driver.elf  > "RCC - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	RCC - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: RCC - Driver.list
+ 
+11:00:21 **** Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m3 -g3 -DDEBUG -c -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f103c8tx.d" -MT"Startup/startup_stm32f103c8tx.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Startup/startup_stm32f103c8tx.o" "../Startup/startup_stm32f103c8tx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc "../RCC/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"RCC/RCC.d" -MT"RCC/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "RCC/RCC.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+arm-none-eabi-gcc -o "GPIO - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\GPIO - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO - Driver.elf
+ 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  GPIO\ -\ Driver.elf  > "GPIO - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO - Driver.list
+ 
+11:14:50 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../RCC/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"RCC/RCC.d" -MT"RCC/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "RCC/RCC.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+In file included from ../GPIO/GPIO.c:9:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:1: error: unknown type name 'uint8_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      | ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:1:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+In file included from ../Src/main.c:21:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:37: error: unknown type name 'uint16_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                     ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:1: error: unknown type name 'uint16_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      | ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:35: error: unknown type name 'uint16_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                                   ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:35: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:55: error: unknown type name 'uint8_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                                                       ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:55: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:36: error: unknown type name 'uint16_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                                    ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:36: error: unknown type name 'uint16_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                    ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:1: error: unknown type name 'uint8_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      | ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:37: error: unknown type name 'uint16_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                     ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from ../GPIO/GPIO.c:10:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:28:18: error: unknown type name 'uint32_t'
+   28 |         volatile uint32_t CRL;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:29:18: error: unknown type name 'uint32_t'
+   29 |         volatile uint32_t CRH;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:30:18: error: unknown type name 'uint32_t'
+   30 |         volatile uint32_t IDR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:31:18: error: unknown type name 'uint32_t'
+   31 |         volatile uint32_t ODR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:32:18: error: unknown type name 'uint32_t'
+   32 |         volatile uint32_t BSRR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:33:18: error: unknown type name 'uint32_t'
+   33 |         volatile uint32_t BRR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:34:18: error: unknown type name 'uint32_t'
+   34 |         volatile uint32_t LCKR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:38:18: error: unknown type name 'uint32_t'
+   38 |         volatile uint32_t EVCR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:39:18: error: unknown type name 'uint32_t'
+   39 |         volatile uint32_t MAPR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:40:18: error: unknown type name 'uint32_t'
+   40 |         volatile uint32_t EXTICR[4];
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:41:9: error: unknown type name 'uint32_t'
+   41 |         uint32_t                  RESERVED0;
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:42:18: error: unknown type name 'uint32_t'
+   42 |         volatile uint32_t MAPR2;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:60:9: error: unknown type name 'uint16_t'
+   60 |         uint16_t GPIO_PinNumber;                //Specifies Pin Number to be Configured >> @ref GPIO_PIN_def
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:61:9: error: unknown type name 'uint16_t'
+   61 |         uint16_t GPIO_MODE;                             //Specifies Pin Mode                                    >> @ref GPIO_MODE_def
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:62:9: error: unknown type name 'uint16_t'
+   62 |         uint16_t GPIO_OUTPUT_SPEED;             //Specifies Pin Output Speed                    >> @ref GPIO_OUTPUT_SPEED_def
+      |         ^~~~~~~~
+../GPIO/GPIO.c:12:1: error: unknown type name 'uint8_t'
+   12 | uint8_t Get_CRLH_Position(uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:11:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   10 | #include "GPIO_Private.h"
+  +++ |+#include <stdint.h>
+   11 | 
+../GPIO/GPIO.c:12:27: error: unknown type name 'uint16_t'
+   12 | uint8_t Get_CRLH_Position(uint16_t PinNumber){
+      |                           ^~~~~~~~
+../GPIO/GPIO.c:12:27: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+../GPIO/GPIO.c: In function 'GPIO_init':
+../GPIO/GPIO.c:76:18: error: unknown type name 'uint32_t'
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                  ^~~~~~~~
+../GPIO/GPIO.c:76:45: error: 'NULL' undeclared (first use in this function)
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:11:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+   10 | #include "GPIO_Private.h"
+  +++ |+#include <stddef.h>
+   11 | 
+../GPIO/GPIO.c:76:45: note: each undeclared identifier is reported only once for each function it appears in
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:77:9: error: unknown type name 'uint8_t'
+   77 |         uint8_t PIN_CONFIG = 0;
+      |         ^~~~~~~
+../GPIO/GPIO.c:77:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from ../GPIO/GPIO.c:10:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:59: error: 'uint16_t' undeclared (first use in this function)
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                           ^~~~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:59: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                           ^~~~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:68: error: expected ')' before numeric constant
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                         ~          ^~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+../GPIO/GPIO.c:82:39: warning: implicit declaration of function 'Get_CRLH_Position' [-Wimplicit-function-declaration]
+   82 |         (*configRegister) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                       ^~~~~~~~~~~~~~~~~
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:125:17: error: 'RCC' undeclared (first use in this function)
+  125 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:136:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  136 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:140:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  140 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c: At top level:
+../GPIO/GPIO.c:155:1: error: unknown type name 'uint8_t'
+  155 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:155:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:155:37: error: unknown type name 'uint16_t'
+  155 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                     ^~~~~~~~
+../GPIO/GPIO.c:155:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:174:1: error: unknown type name 'uint16_t'
+  174 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx){
+      | ^~~~~~~~
+../GPIO/GPIO.c:174:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: In function 'GPIO_ReadPort':
+../GPIO/GPIO.c:175:9: error: unknown type name 'uint16_t'
+  175 |         uint16_t portValue;
+      |         ^~~~~~~~
+../GPIO/GPIO.c:175:9: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:176:22: error: 'uint16_t' undeclared (first use in this function)
+  176 |         portValue = (uint16_t)(GPIOx->IDR);
+      |                      ^~~~~~~~
+../GPIO/GPIO.c:176:22: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: At top level:
+../GPIO/GPIO.c:190:35: error: unknown type name 'uint16_t'
+  190 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data){
+      |                                   ^~~~~~~~
+../GPIO/GPIO.c:190:35: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:190:55: error: unknown type name 'uint8_t'
+  190 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data){
+      |                                                       ^~~~~~~
+../GPIO/GPIO.c:190:55: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:208:36: error: unknown type name 'uint16_t'
+  208 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data){
+      |                                    ^~~~~~~~
+../GPIO/GPIO.c:208:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:221:36: error: unknown type name 'uint16_t'
+  221 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                    ^~~~~~~~
+../GPIO/GPIO.c:221:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:233:1: error: unknown type name 'uint8_t'
+  233 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:233:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:233:37: error: unknown type name 'uint16_t'
+  233 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                     ^~~~~~~~
+../GPIO/GPIO.c:233:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:16:18 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+In file included from ../Src/main.c:21:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+In file included from ../GPIO/GPIO.c:9:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:1: error: unknown type name 'uint8_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      | ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:1:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:37: error: unknown type name 'uint16_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                     ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:1: error: unknown type name 'uint16_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      | ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:35: error: unknown type name 'uint16_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                                   ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:35: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:55: error: unknown type name 'uint8_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                                                       ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:55: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:36: error: unknown type name 'uint16_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                                    ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:36: error: unknown type name 'uint16_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                    ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:1: error: unknown type name 'uint8_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      | ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:37: error: unknown type name 'uint16_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                     ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from ../GPIO/GPIO.c:10:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:28:18: error: unknown type name 'uint32_t'
+   28 |         volatile uint32_t CRL;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:29:18: error: unknown type name 'uint32_t'
+   29 |         volatile uint32_t CRH;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:30:18: error: unknown type name 'uint32_t'
+   30 |         volatile uint32_t IDR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:31:18: error: unknown type name 'uint32_t'
+   31 |         volatile uint32_t ODR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:32:18: error: unknown type name 'uint32_t'
+   32 |         volatile uint32_t BSRR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:33:18: error: unknown type name 'uint32_t'
+   33 |         volatile uint32_t BRR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:34:18: error: unknown type name 'uint32_t'
+   34 |         volatile uint32_t LCKR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:38:18: error: unknown type name 'uint32_t'
+   38 |         volatile uint32_t EVCR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:39:18: error: unknown type name 'uint32_t'
+   39 |         volatile uint32_t MAPR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:40:18: error: unknown type name 'uint32_t'
+   40 |         volatile uint32_t EXTICR[4];
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:41:9: error: unknown type name 'uint32_t'
+   41 |         uint32_t                  RESERVED0;
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:42:18: error: unknown type name 'uint32_t'
+   42 |         volatile uint32_t MAPR2;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:60:9: error: unknown type name 'uint16_t'
+   60 |         uint16_t GPIO_PinNumber;                //Specifies Pin Number to be Configured >> @ref GPIO_PIN_def
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:61:9: error: unknown type name 'uint16_t'
+   61 |         uint16_t GPIO_MODE;                             //Specifies Pin Mode                                    >> @ref GPIO_MODE_def
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:62:9: error: unknown type name 'uint16_t'
+   62 |         uint16_t GPIO_OUTPUT_SPEED;             //Specifies Pin Output Speed                    >> @ref GPIO_OUTPUT_SPEED_def
+      |         ^~~~~~~~
+../GPIO/GPIO.c:12:1: error: unknown type name 'uint8_t'
+   12 | uint8_t Get_CRLH_Position(uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:11:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   10 | #include "GPIO_Private.h"
+  +++ |+#include <stdint.h>
+   11 | 
+../GPIO/GPIO.c:12:27: error: unknown type name 'uint16_t'
+   12 | uint8_t Get_CRLH_Position(uint16_t PinNumber){
+      |                           ^~~~~~~~
+../GPIO/GPIO.c:12:27: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: In function 'GPIO_init':
+../GPIO/GPIO.c:76:18: error: unknown type name 'uint32_t'
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                  ^~~~~~~~
+../GPIO/GPIO.c:76:45: error: 'NULL' undeclared (first use in this function)
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:11:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+   10 | #include "GPIO_Private.h"
+  +++ |+#include <stddef.h>
+   11 | 
+../GPIO/GPIO.c:76:45: note: each undeclared identifier is reported only once for each function it appears in
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:77:9: error: unknown type name 'uint8_t'
+   77 |         uint8_t PIN_CONFIG = 0;
+      |         ^~~~~~~
+../GPIO/GPIO.c:77:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from ../GPIO/GPIO.c:10:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:59: error: 'uint16_t' undeclared (first use in this function)
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                           ^~~~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:59: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                           ^~~~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:68: error: expected ')' before numeric constant
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                         ~          ^~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+../GPIO/GPIO.c:82:39: warning: implicit declaration of function 'Get_CRLH_Position' [-Wimplicit-function-declaration]
+   82 |         (*configRegister) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                       ^~~~~~~~~~~~~~~~~
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:125:17: error: 'RCC' undeclared (first use in this function)
+  125 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:136:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  136 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:140:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  140 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c: At top level:
+../GPIO/GPIO.c:155:1: error: unknown type name 'uint8_t'
+  155 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:155:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:155:37: error: unknown type name 'uint16_t'
+  155 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                     ^~~~~~~~
+../GPIO/GPIO.c:155:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:174:1: error: unknown type name 'uint16_t'
+  174 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx){
+      | ^~~~~~~~
+../GPIO/GPIO.c:174:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: In function 'GPIO_ReadPort':
+../GPIO/GPIO.c:175:9: error: unknown type name 'uint16_t'
+  175 |         uint16_t portValue;
+      |         ^~~~~~~~
+../GPIO/GPIO.c:175:9: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:176:22: error: 'uint16_t' undeclared (first use in this function)
+  176 |         portValue = (uint16_t)(GPIOx->IDR);
+      |                      ^~~~~~~~
+../GPIO/GPIO.c:176:22: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: At top level:
+../GPIO/GPIO.c:190:35: error: unknown type name 'uint16_t'
+  190 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data){
+      |                                   ^~~~~~~~
+../GPIO/GPIO.c:190:35: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:190:55: error: unknown type name 'uint8_t'
+  190 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data){
+      |                                                       ^~~~~~~
+../GPIO/GPIO.c:190:55: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:208:36: error: unknown type name 'uint16_t'
+  208 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data){
+      |                                    ^~~~~~~~
+../GPIO/GPIO.c:208:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:221:36: error: unknown type name 'uint16_t'
+  221 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                    ^~~~~~~~
+../GPIO/GPIO.c:221:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:233:1: error: unknown type name 'uint8_t'
+  233 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:233:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:233:37: error: unknown type name 'uint16_t'
+  233 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                     ^~~~~~~~
+../GPIO/GPIO.c:233:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:16:23 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+In file included from ../Src/main.c:21:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+In file included from ../GPIO/GPIO.c:9:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:1: error: unknown type name 'uint8_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      | ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:1:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+  +++ |+#include <stdint.h>
+    1 | /*
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:37: error: unknown type name 'uint16_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                     ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:1: error: unknown type name 'uint16_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      | ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:35: error: unknown type name 'uint16_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                                   ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:35: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:55: error: unknown type name 'uint8_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                                                       ^~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:55: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:36: error: unknown type name 'uint16_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                                    ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:36: error: unknown type name 'uint16_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                    ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:1: error: unknown type name 'uint8_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      | ^~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** Waiting for unfinished jobs....
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:37: error: unknown type name 'uint16_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                                     ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from ../GPIO/GPIO.c:10:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:28:18: error: unknown type name 'uint32_t'
+   28 |         volatile uint32_t CRL;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:29:18: error: unknown type name 'uint32_t'
+   29 |         volatile uint32_t CRH;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:30:18: error: unknown type name 'uint32_t'
+   30 |         volatile uint32_t IDR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:31:18: error: unknown type name 'uint32_t'
+   31 |         volatile uint32_t ODR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:32:18: error: unknown type name 'uint32_t'
+   32 |         volatile uint32_t BSRR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:33:18: error: unknown type name 'uint32_t'
+   33 |         volatile uint32_t BRR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:34:18: error: unknown type name 'uint32_t'
+   34 |         volatile uint32_t LCKR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:38:18: error: unknown type name 'uint32_t'
+   38 |         volatile uint32_t EVCR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:39:18: error: unknown type name 'uint32_t'
+   39 |         volatile uint32_t MAPR;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:40:18: error: unknown type name 'uint32_t'
+   40 |         volatile uint32_t EXTICR[4];
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:41:9: error: unknown type name 'uint32_t'
+   41 |         uint32_t                  RESERVED0;
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:42:18: error: unknown type name 'uint32_t'
+   42 |         volatile uint32_t MAPR2;
+      |                  ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:60:9: error: unknown type name 'uint16_t'
+   60 |         uint16_t GPIO_PinNumber;                //Specifies Pin Number to be Configured >> @ref GPIO_PIN_def
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:61:9: error: unknown type name 'uint16_t'
+   61 |         uint16_t GPIO_MODE;                             //Specifies Pin Mode                                    >> @ref GPIO_MODE_def
+      |         ^~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:62:9: error: unknown type name 'uint16_t'
+   62 |         uint16_t GPIO_OUTPUT_SPEED;             //Specifies Pin Output Speed                    >> @ref GPIO_OUTPUT_SPEED_def
+      |         ^~~~~~~~
+../GPIO/GPIO.c:12:1: error: unknown type name 'uint8_t'
+   12 | uint8_t Get_CRLH_Position(uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:11:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   10 | #include "GPIO_Private.h"
+  +++ |+#include <stdint.h>
+   11 | 
+../GPIO/GPIO.c:12:27: error: unknown type name 'uint16_t'
+   12 | uint8_t Get_CRLH_Position(uint16_t PinNumber){
+      |                           ^~~~~~~~
+../GPIO/GPIO.c:12:27: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: In function 'GPIO_init':
+../GPIO/GPIO.c:76:18: error: unknown type name 'uint32_t'
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                  ^~~~~~~~
+../GPIO/GPIO.c:76:45: error: 'NULL' undeclared (first use in this function)
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:11:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+   10 | #include "GPIO_Private.h"
+  +++ |+#include <stddef.h>
+   11 | 
+../GPIO/GPIO.c:76:45: note: each undeclared identifier is reported only once for each function it appears in
+   76 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:77:9: error: unknown type name 'uint8_t'
+   77 |         uint8_t PIN_CONFIG = 0;
+      |         ^~~~~~~
+../GPIO/GPIO.c:77:9: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+In file included from ../GPIO/GPIO.c:10:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:59: error: 'uint16_t' undeclared (first use in this function)
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                           ^~~~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:59: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                           ^~~~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO_Private.h:81:68: error: expected ')' before numeric constant
+   81 | #define GPIO_PIN_8                                      ((uint16_t)0x0100)      //Selected PIN8
+      |                                                         ~          ^~~~~~
+../GPIO/GPIO.c:79:55: note: in expansion of macro 'GPIO_PIN_8'
+   79 |         configRegister = (PinConfig->GPIO_PinNumber < GPIO_PIN_8)? &GPIOx->CRL: &GPIOx->CRH;
+      |                                                       ^~~~~~~~~~
+../GPIO/GPIO.c:82:39: warning: implicit declaration of function 'Get_CRLH_Position' [-Wimplicit-function-declaration]
+   82 |         (*configRegister) &= ~(0xF << Get_CRLH_Position(PinConfig->GPIO_PinNumber));
+      |                                       ^~~~~~~~~~~~~~~~~
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:125:17: error: 'RCC' undeclared (first use in this function)
+  125 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:136:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  136 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:140:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  140 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c: At top level:
+../GPIO/GPIO.c:155:1: error: unknown type name 'uint8_t'
+  155 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:155:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:155:37: error: unknown type name 'uint16_t'
+  155 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                     ^~~~~~~~
+../GPIO/GPIO.c:155:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:174:1: error: unknown type name 'uint16_t'
+  174 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx){
+      | ^~~~~~~~
+../GPIO/GPIO.c:174:1: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: In function 'GPIO_ReadPort':
+../GPIO/GPIO.c:175:9: error: unknown type name 'uint16_t'
+  175 |         uint16_t portValue;
+      |         ^~~~~~~~
+../GPIO/GPIO.c:175:9: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:176:22: error: 'uint16_t' undeclared (first use in this function)
+  176 |         portValue = (uint16_t)(GPIOx->IDR);
+      |                      ^~~~~~~~
+../GPIO/GPIO.c:176:22: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c: At top level:
+../GPIO/GPIO.c:190:35: error: unknown type name 'uint16_t'
+  190 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data){
+      |                                   ^~~~~~~~
+../GPIO/GPIO.c:190:35: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:190:55: error: unknown type name 'uint8_t'
+  190 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data){
+      |                                                       ^~~~~~~
+../GPIO/GPIO.c:190:55: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:208:36: error: unknown type name 'uint16_t'
+  208 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data){
+      |                                    ^~~~~~~~
+../GPIO/GPIO.c:208:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:221:36: error: unknown type name 'uint16_t'
+  221 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                    ^~~~~~~~
+../GPIO/GPIO.c:221:36: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:233:1: error: unknown type name 'uint8_t'
+  233 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      | ^~~~~~~
+../GPIO/GPIO.c:233:1: note: 'uint8_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+../GPIO/GPIO.c:233:37: error: unknown type name 'uint16_t'
+  233 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber){
+      |                                     ^~~~~~~~
+../GPIO/GPIO.c:233:37: note: 'uint16_t' is defined in header '<stdint.h>'; did you forget to '#include <stdint.h>'?
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:16:55 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+In file included from ../Src/main.c:21:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+In file included from ../GPIO/GPIO.c:11:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+../GPIO/GPIO.c: In function 'GPIO_init':
+../GPIO/GPIO.c:78:45: error: 'NULL' undeclared (first use in this function)
+   78 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c:13:1: note: 'NULL' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+   12 | #include "GPIO_Private.h"
+  +++ |+#include <stddef.h>
+   13 | 
+../GPIO/GPIO.c:78:45: note: each undeclared identifier is reported only once for each function it appears in
+   78 |         volatile uint32_t *configRegister = NULL;
+      |                                             ^~~~
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:127:17: error: 'RCC' undeclared (first use in this function)
+  127 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:138:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  138 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:142:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  142 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:18:02 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../RCC/RCC.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"RCC/RCC.d" -MT"RCC/RCC.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "RCC/RCC.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+In file included from ../Src/main.c:21:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+In file included from ../GPIO/GPIO.c:11:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:127:17: error: 'RCC' undeclared (first use in this function)
+  127 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:127:17: note: each undeclared identifier is reported only once for each function it appears in
+../GPIO/GPIO.c:138:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  138 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:142:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  142 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:19:45 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+In file included from ../Src/main.c:21:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:16: error: unknown type name 'GPIO_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:11:31: error: unknown type name 'GPIO_PinConfig_t'
+   11 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |                               ^~~~~~~~~~~~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:12:18: error: unknown type name 'GPIO_t'
+   12 | void GPIO_deinit(GPIO_t *GPIOx);
+      |                  ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:14:22: error: unknown type name 'GPIO_t'
+   14 | uint8_t GPIO_ReadPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:15:24: error: unknown type name 'GPIO_t'
+   15 | uint16_t GPIO_ReadPort(GPIO_t *GPIOx);
+      |                        ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:17:20: error: unknown type name 'GPIO_t'
+   17 | void GPIO_WritePin(GPIO_t *GPIOx, uint16_t PinNumber, uint8_t data);
+      |                    ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:18:21: error: unknown type name 'GPIO_t'
+   18 | void GPIO_WritePort(GPIO_t *GPIOx, uint16_t data);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:20:21: error: unknown type name 'GPIO_t'
+   20 | void GPIO_TogglePin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                     ^~~~~~
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:22:22: error: unknown type name 'GPIO_t'
+   22 | uint8_t GPIO_LockPin(GPIO_t *GPIOx, uint16_t PinNumber);
+      |                      ^~~~~~
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:127:17: error: 'RCC' undeclared (first use in this function)
+  127 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:127:17: note: each undeclared identifier is reported only once for each function it appears in
+../GPIO/GPIO.c:138:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  138 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:142:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  142 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:22:34 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:127:17: error: 'RCC' undeclared (first use in this function)
+  127 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:127:17: note: each undeclared identifier is reported only once for each function it appears in
+../GPIO/GPIO.c:138:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  138 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:142:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  142 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:23:09 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:128:17: error: 'RCC' undeclared (first use in this function)
+  128 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:128:17: note: each undeclared identifier is reported only once for each function it appears in
+../GPIO/GPIO.c:139:26: error: 'GPIOD' undeclared (first use in this function); did you mean 'GPIOx'?
+  139 |         else if(GPIOx == GPIOD){
+      |                          ^~~~~
+      |                          GPIOx
+../GPIO/GPIO.c:143:26: error: 'GPIOE' undeclared (first use in this function); did you mean 'GPIOx'?
+  143 |         else if(GPIOx == GPIOE){
+      |                          ^~~~~
+      |                          GPIOx
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:23:39 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+../GPIO/GPIO.c: In function 'GPIO_deinit':
+../GPIO/GPIO.c:128:17: error: 'RCC' undeclared (first use in this function)
+  128 |                 RCC->APB2RSTR |= (1<<2);
+      |                 ^~~
+../GPIO/GPIO.c:128:17: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [GPIO/subdir.mk:19: GPIO/GPIO.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:24:23 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+arm-none-eabi-gcc -o "GPIO - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\GPIO - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO - Driver.elf
+ 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  GPIO\ -\ Driver.elf  > "GPIO - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+    556	      8	   1568	   2132	    854	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO - Driver.list
+ 
+11:37:30 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+../Src/main.c: In function 'GPIO_init':
+../Src/main.c:33:1: error: number of arguments doesn't match prototype
+   33 | void GPIO_init(){
+      | ^~~~
+In file included from ../Src/main.c:22:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:110:6: error: prototype declaration
+  110 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |      ^~~~~~~~~
+../Src/main.c:39:9: warning: implicit declaration of function 'MCAL_GPIO_init'; did you mean 'GPIO_init'? [-Wimplicit-function-declaration]
+   39 |         MCAL_GPIO_init(GPIOA, &PinConfig);
+      |         ^~~~~~~~~~~~~~
+      |         GPIO_init
+../Src/main.c:39:24: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIO_t'?
+   39 |         MCAL_GPIO_init(GPIOA, &PinConfig);
+      |                        ^~~~~
+      |                        GPIO_t
+../Src/main.c:39:24: note: each undeclared identifier is reported only once for each function it appears in
+../Src/main.c: In function 'main':
+../Src/main.c:45:9: error: too few arguments to function 'GPIO_init'
+   45 |         GPIO_init();
+      |         ^~~~~~~~~
+../Src/main.c:33:6: note: declared here
+   33 | void GPIO_init(){
+      |      ^~~~~~~~~
+../Src/main.c:48:32: error: 'GPIOA' undeclared (first use in this function); did you mean 'GPIO_t'?
+   48 |                 GPIO_TogglePin(GPIOA, GPIO_PIN_2);
+      |                                ^~~~~
+      |                                GPIO_t
+In file included from ../Src/main.c:20:
+../Inc/arm_util.h:13:36: error: 'd' undeclared (first use in this function)
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:38:20 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../GPIO/GPIO.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"GPIO/GPIO.d" -MT"GPIO/GPIO.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "GPIO/GPIO.o"
+../Src/main.c: In function 'GPIO_init':
+../Src/main.c:33:1: error: number of arguments doesn't match prototype
+   33 | void GPIO_init(){
+      | ^~~~
+In file included from ../Src/main.c:22:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:132:6: error: prototype declaration
+  132 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |      ^~~~~~~~~
+../Src/main.c:39:9: warning: implicit declaration of function 'MCAL_GPIO_init'; did you mean 'GPIO_init'? [-Wimplicit-function-declaration]
+   39 |         MCAL_GPIO_init(GPIOA, &PinConfig);
+      |         ^~~~~~~~~~~~~~
+      |         GPIO_init
+../Src/main.c: In function 'main':
+../Src/main.c:45:9: error: too few arguments to function 'GPIO_init'
+   45 |         GPIO_init();
+      |         ^~~~~~~~~
+../Src/main.c:33:6: note: declared here
+   33 | void GPIO_init(){
+      |      ^~~~~~~~~
+In file included from ../Src/main.c:20:
+../Inc/arm_util.h:13:36: error: 'd' undeclared (first use in this function)
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+../Inc/arm_util.h:13:36: note: each undeclared identifier is reported only once for each function it appears in
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:38:30 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'GPIO_init':
+../Src/main.c:33:1: error: number of arguments doesn't match prototype
+   33 | void GPIO_init(){
+      | ^~~~
+In file included from ../Src/main.c:22:
+E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc/GPIO.h:132:6: error: prototype declaration
+  132 | void GPIO_init(GPIO_t *GPIOx, GPIO_PinConfig_t *PinConfig);
+      |      ^~~~~~~~~
+../Src/main.c:39:9: warning: implicit declaration of function 'MCAL_GPIO_init'; did you mean 'GPIO_init'? [-Wimplicit-function-declaration]
+   39 |         MCAL_GPIO_init(GPIOA, &PinConfig);
+      |         ^~~~~~~~~~~~~~
+      |         GPIO_init
+../Src/main.c: In function 'main':
+../Src/main.c:45:9: error: too few arguments to function 'GPIO_init'
+   45 |         GPIO_init();
+      |         ^~~~~~~~~
+../Src/main.c:33:6: note: declared here
+   33 | void GPIO_init(){
+      |      ^~~~~~~~~
+In file included from ../Src/main.c:20:
+../Inc/arm_util.h:13:36: error: 'd' undeclared (first use in this function)
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+../Inc/arm_util.h:13:36: note: each undeclared identifier is reported only once for each function it appears in
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:39:02 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+In file included from ../Src/main.c:20:
+../Src/main.c: In function 'main':
+../Inc/arm_util.h:13:36: error: 'd' undeclared (first use in this function)
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+../Inc/arm_util.h:13:36: note: each undeclared identifier is reported only once for each function it appears in
+   13 |                 uint32_t i = 500 * d; \
+      |                                    ^
+../Src/main.c:49:17: note: in expansion of macro 'delay_ms'
+   49 |                 delay_ms(1000);
+      |                 ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+11:39:12 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "GPIO - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\GPIO - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO - Driver.elf
+ 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  GPIO\ -\ Driver.elf  > "GPIO - Driver.list"
+   text	   data	    bss	    dec	    hex	filename
+   1496	      8	   1568	   3072	    c00	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO - Driver.list
+ 
+11:42:42 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1496	      8	   1568	   3072	    c00	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+11:45:09 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc -o "GPIO - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\GPIO - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO - Driver.elf
+ 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  GPIO\ -\ Driver.elf  > "GPIO - Driver.list"
+arm-none-eabi-objcopy  -O ihex  GPIO\ -\ Driver.elf  "GPIO - Driver.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1496	      8	   1568	   3072	    c00	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO - Driver.list
+ 
+Finished building: GPIO - Driver.hex
+ 
+11:47:09 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1496	      8	   1568	   3072	    c00	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+12:00:37 **** Incremental Build of configuration Debug for project GPIO - Driver ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -c -I../Inc -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/RCC/inc" -I"E:/Embedded Systems Diploma/Automotive Embedded/Week 5 - ARM Interfacing/GPIO - Driver/GPIO/inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "GPIO - Driver.elf" @"objects.list"   -mcpu=cortex-m3 -T"E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\GPIO - Driver\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO - Driver.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO - Driver.elf
+ 
+arm-none-eabi-size   GPIO\ -\ Driver.elf 
+arm-none-eabi-objdump -h -S  GPIO\ -\ Driver.elf  > "GPIO - Driver.list"
+arm-none-eabi-objcopy  -O ihex  GPIO\ -\ Driver.elf  "GPIO - Driver.hex"
+   text	   data	    bss	    dec	    hex	filename
+   1472	      8	   1568	   3048	    be8	GPIO - Driver.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO - Driver.hex
+Finished building: GPIO - Driver.list
+ 
+ 

@@ -1,0 +1,49 @@
+/*
+ * GPIO_Private.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_GPIO_PRIVATE_H_
+#define INC_GPIO_PRIVATE_H_
+
+//====================================================================
+//					Base addresses for APB2 Bus
+//====================================================================
+
+//GPIO Base Address
+#define GPIOA_BASE 			0x40010800UL
+#define GPIOB_BASE 			0x40010C00UL
+#define GPIOC_BASE 			0x40011000UL
+
+//AFIO Base Address
+#define AFIO_BASE 		0x40010000UL
+
+//====================================================================
+//						Peripheral Registers
+//====================================================================
+
+typedef struct{
+	volatile uint32_t CRL;
+	volatile uint32_t CRH;
+	volatile uint32_t IDR;
+	volatile uint32_t ODR;
+	volatile uint32_t BSRR;
+	volatile uint32_t BRR;
+	volatile uint32_t LCKR;
+}GPIO_t;
+
+//====================================================================
+//						Peripheral Instants
+//====================================================================
+
+#define GPIOA 			((GPIO_t *)	GPIOA_BASE)
+#define GPIOB 			((GPIO_t *)	GPIOB_BASE)
+#define GPIOC 			((GPIO_t *)	GPIOC_BASE)
+
+
+
+
+
+#endif /* INC_GPIO_PRIVATE_H_ */

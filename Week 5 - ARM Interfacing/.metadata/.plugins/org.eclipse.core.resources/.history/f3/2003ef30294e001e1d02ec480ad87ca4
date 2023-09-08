@@ -1,0 +1,43 @@
+/*
+ * GPIO_Config.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_GPIO_CONFIG_H_
+#define INC_GPIO_CONFIG_H_
+
+//====================================================================
+//						Peripheral Registers
+//====================================================================
+
+typedef struct{
+	volatile uint32_t CRL;
+	volatile uint32_t CRH;
+	volatile uint32_t IDR;
+	volatile uint32_t ODR;
+	volatile uint32_t BSRR;
+	volatile uint32_t BRR;
+	volatile uint32_t LCKR;
+}GPIO_t;
+
+typedef struct{
+	volatile uint32_t EVCR;
+	volatile uint32_t MAPR;
+	volatile uint32_t EXTICR[4];
+	uint32_t 		  RESERVED0;
+	volatile uint32_t MAPR2;
+}AFIO_t;
+
+//====================================================================
+//						Configuration Structure
+//====================================================================
+
+typedef struct{
+	uint16_t GPIO_PinNumber;		//Specifies Pin Number to be Configured >> @ref GPIO_PIN_def
+	uint16_t GPIO_MODE;				//Specifies Pin Mode 					>> @ref GPIO_MODE_def
+	uint16_t GPIO_OUTPUT_SPEED;		//Specifies Pin Output Speed		 	>> @ref GPIO_OUTPUT_SPEED_def
+}GPIO_PinConfig_t;
+
+#endif /* INC_GPIO_CONFIG_H_ */

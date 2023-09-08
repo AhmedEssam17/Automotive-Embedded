@@ -1,0 +1,34 @@
+/*
+ * GPIO_Private.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_GPIO_PRIVATE_H_
+#define INC_GPIO_PRIVATE_H_
+
+//====================================================================
+//					Base addresses for APB2 Bus
+//====================================================================
+
+//GPIO Base Address
+#define GPIOA_BASE 			0x40010800UL
+#define GPIOB_BASE 			0x40010C00UL
+#define GPIOC_BASE 			0x40011000UL
+
+//AFIO Base Address
+#define AFIO_BASE 			0x40010000UL
+
+//====================================================================
+//						Peripheral Instants
+//====================================================================
+
+#define GPIOA 			((GPIO_t *)	GPIOA_BASE)
+#define GPIOB 			((GPIO_t *)	GPIOB_BASE)
+#define GPIOC 			((GPIO_t *)	GPIOC_BASE)
+
+#define AFIO			((AFIO_t *)	AFIO_BASE)
+
+
+#endif /* INC_GPIO_PRIVATE_H_ */

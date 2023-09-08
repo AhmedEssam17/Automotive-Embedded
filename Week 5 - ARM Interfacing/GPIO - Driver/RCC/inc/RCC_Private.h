@@ -1,0 +1,129 @@
+/*
+ * RCC_Private.h
+ *
+ *  Created on: Sep 8, 2023
+ *      Author: Lenovo
+ */
+
+#ifndef INC_RCC_PRIVATE_H_
+#define INC_RCC_PRIVATE_H_
+
+//====================================================================
+//					Base addresses for AHB Bus
+//====================================================================
+
+#define RCC_BASE 						0x40021000UL
+
+//====================================================================
+//						Peripheral Registers
+//====================================================================
+
+typedef struct{
+	volatile uint32_t CR;
+	volatile uint32_t CFGR;
+	volatile uint32_t CIR;
+	volatile uint32_t APB2RSTR;
+	volatile uint32_t APB1RSTR;
+	volatile uint32_t AHBENR;
+	volatile uint32_t APB2ENR;
+	volatile uint32_t APB1ENR;
+	volatile uint32_t BDCR;
+	volatile uint32_t CSR;
+	volatile uint32_t AHBSTR;
+	volatile uint32_t CFGR2;
+}RCC_t;
+
+//====================================================================
+//						Peripheral Instant
+//====================================================================
+#define RCC								((RCC_t *)	RCC_BASE)
+
+//====================================================================
+//						Configuration Reference
+//====================================================================
+#define		PLL_DS						(uint32_t)(0)
+#define		PLL_EN						(uint32_t)(1<<24)
+
+#define		CSS_DS						(uint32_t)(0)
+#define		CSS_EN						(uint32_t)(1<<19)
+
+#define		HSE_BYP_DS					(uint32_t)(0)
+#define		HSE_BYP_EN					(uint32_t)(1<<18)
+
+#define		HSE_OFF						(uint32_t)(0)
+#define		HSE_ON						(uint32_t)(1<<16)
+
+#define		HSI_DS						(uint32_t)(0)
+#define		HSI_EN						(uint32_t)(1<<0)
+
+#define		MCO_NO_CLK					(0b000 << 24)
+#define		MCO_SYSCLK					(0b100 << 24)
+#define		MCO_HSI						(0b101 << 24)
+#define		MCO_HSE						(0b110 << 24)
+#define		MCO_PLL						(0b111 << 24)
+
+#define		OTG_FS_PRES_DIV3			(uint32_t)(0)
+#define		OTG_FS_PRES_DIV2			(uint32_t)(1<<22)
+
+#define		PLL_X2						(0b0000 << 18)
+#define		PLL_X3						(0b0001 << 18)
+#define		PLL_X4						(0b0010 << 18)
+#define		PLL_X5						(0b0011 << 18)
+#define		PLL_X6						(0b0100 << 18)
+#define		PLL_X7						(0b0101 << 18)
+#define		PLL_X8						(0b0110 << 18)
+#define		PLL_X9						(0b0111 << 18)
+#define		PLL_X10						(0b1000 << 18)
+#define		PLL_X11						(0b1001 << 18)
+#define		PLL_X12						(0b1010 << 18)
+#define		PLL_X13						(0b1011 << 18)
+#define		PLL_X14						(0b1100 << 18)
+#define		PLL_X15						(0b1101 << 18)
+#define		PLL_X16						(0b1110 << 18)
+
+#define		PLL_HSE_DIV_DS				(uint32_t)(0)
+#define		PLL_HSE_DIV_EN				(uint32_t)(1<<17)
+
+#define		PLL_HSI						(uint32_t)(0)
+#define		PLL_HSE						(uint32_t)(1<<16)
+
+#define		ADC_X2						(0b00 << 14)
+#define		ADC_X4						(0b01 << 14)
+#define		ADC_X6						(0b10 << 14)
+#define		ADC_X8						(0b11 << 14)
+
+#define		APBH_NO_DIV					(0b000 << 11)
+#define		APBH_X2						(0b100 << 11)
+#define		APBH_X4						(0b101 << 11)
+#define		APBH_X8						(0b110 << 11)
+#define		APBH_X16					(0b111 << 11)
+
+#define		APBL_NO_DIV					(0b000 << 8)
+#define		APBL_X2						(0b100 << 8)
+#define		APBL_X4						(0b101 << 8)
+#define		APBL_X8						(0b110 << 8)
+#define		APBL_X16					(0b111 << 8)
+
+#define		AHB_NO_DIV					(0b0000 << 4)
+#define		AHB_X2						(0b1000 << 4)
+#define		AHB_X4						(0b1001 << 4)
+#define		AHB_X8						(0b1010 << 4)
+#define		AHB_X16 					(0b1011 << 4)
+#define		AHB_X64 					(0b1100 << 4)
+#define		AHB_X128					(0b1101 << 4)
+#define		AHB_X256					(0b1110 << 4)
+#define		AHB_X512					(0b1111 << 4)
+
+#define		SWS_HSI						(0b00 << 2)
+#define		SWS_HSE						(0b01 << 2)
+#define		SWS_PLL						(0b10 << 2)
+#define		SWS_NO						(0b11 << 2)
+
+#define		SW_HSI						(0b00 << 0)
+#define		SW_HSE						(0b01 << 0)
+#define		SW_PLL						(0b10 << 0)
+#define		SW_NO						(0b11 << 0)
+
+
+
+#endif /* INC_RCC_PRIVATE_H_ */

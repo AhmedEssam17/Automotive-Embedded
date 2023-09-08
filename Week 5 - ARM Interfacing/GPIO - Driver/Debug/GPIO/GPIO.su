@@ -1,0 +1,8 @@
+GPIO.c:13:9:Get_CRLH_Position	16	static
+GPIO.c:76:6:GPIO_init	32	static
+GPIO.c:123:9:GPIO_ReadPin	24	static
+GPIO.c:142:10:GPIO_ReadPort	24	static
+GPIO.c:158:6:GPIO_WritePin	16	static
+GPIO.c:176:6:GPIO_WritePort	16	static
+GPIO.c:189:6:GPIO_TogglePin	16	static
+GPIO.c:201:9:GPIO_LockPin	24	static

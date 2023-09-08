@@ -1,0 +1,84 @@
+!SESSION 2023-09-08 10:36:18.180 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-08 10:36:47.195
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-08 10:36:47.211
+!MESSAGE Log4j2 initialized with config file E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-08 10:36:50.373
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-08 10:38:26.240
+!MESSAGE Indexed 'RCC - Driver' (3 sources, 53 headers) in 2.73 sec: 1,950 declarations; 2,831 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+!SESSION 2023-09-08 10:39:43.655 -----------------------------------------------
+eclipse.buildId=Version 1.13.1
+java.version=17.0.6
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2023-09-08 10:40:02.296
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2023-09-08 10:40:02.302
+!MESSAGE Log4j2 initialized with config file E:\Embedded Systems Diploma\Automotive Embedded\Week 5 - ARM Interfacing\.metadata\.log4j2.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2023-09-08 10:40:16.842
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-08 10:41:19.777
+!MESSAGE Indexed 'RCC - Driver' (4 sources, 57 headers) in 0.539 sec: 2,007 declarations; 2,949 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.04%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 10:43:55.623
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 10:43:55.625
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 10:45:29.076
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 10:45:29.076
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 10:46:56.816
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 10:46:56.816
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 10:50:15.076
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 10:50:15.076
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 10:51:47.752
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 10:51:47.752
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 10:52:31.936
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 10:52:31.937
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-08 10:54:43.633
+!MESSAGE Indexed 'GPIO - Driver' (2 sources, 53 headers) in 0.549 sec: 1,948 declarations; 2,829 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.042%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2023-09-08 11:00:17.353
+!MESSAGE Indexed 'GPIO - Driver' (5 sources, 60 headers) in 0.233 sec: 2,006 declarations; 2,949 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.04%)
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 2 2023-09-08 11:47:12.084
+!MESSAGE Vendor: 1; 4; 3b; 4c3
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2023-09-08 11:47:12.085
+!MESSAGE Could not verify ST device! Please verify that the latest version of the GDB-server is used for the connection.
