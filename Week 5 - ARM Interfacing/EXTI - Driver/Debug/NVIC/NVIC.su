@@ -1,0 +1,7 @@
+NVIC.c:13:6:NVIC_init	4	static
+NVIC.c:18:6:NVIC_EnableInterrupt	16	static
+NVIC.c:38:6:NVIC_DisableInterrupt	16	static
+NVIC.c:58:6:NVIC_SetPendingFlag	16	static
+NVIC.c:78:6:NVIC_ClearPendingFlag	16	static
+NVIC.c:98:6:NVIC_GetActiveFlag	16	static
+NVIC.c:118:6:NVIC_SetPriority	24	static

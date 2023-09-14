@@ -1,0 +1,8 @@
+"EXTI/EXTI.o"
+"GPIO/GPIO.o"
+"NVIC/NVIC.o"
+"RCC/RCC.o"
+"Src/main.o"
+"Src/syscalls.o"
+"Src/sysmem.o"
+"Startup/startup_stm32f103c8tx.o"

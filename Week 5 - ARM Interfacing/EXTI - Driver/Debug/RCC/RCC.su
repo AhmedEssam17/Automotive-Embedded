@@ -1,0 +1,3 @@
+RCC.c:13:6:RCC_init	4	static
+RCC.c:26:6:RCC_enableClock	16	static
+RCC.c:41:6:RCC_disableClock	16	static
